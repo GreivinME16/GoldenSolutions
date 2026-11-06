@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  min-width: 320px;
+  min-height: 100%;
+}
+html body {
+  min-height: 100vh;
+  font-family: "Montserrat", Arial, sans-serif;
+  color: #f5f7fa;
+  background: radial-gradient(ellipse at 50% 48%, rgba(212, 167, 44, 0.075), rgba(212, 167, 44, 0.025) 24%, transparent 52%), #07080d;
+}
+html body .page {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px 24px;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 520px) {
+  html body .page {
+    padding: 32px 24px 24px;
+  }
+}
+html body .page .construction {
+  width: min(100%, 760px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: fade-up 900ms ease both;
+}
+html body .page .construction .brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  margin-bottom: 32px;
+  text-decoration: none;
+}
+@media (max-width: 520px) {
+  html body .page .construction .brand {
+    margin-bottom: 24px;
+  }
+}
+html body .page .construction .brand .brand__logo {
+  display: block;
+  width: 154px;
+  max-height: 64px;
+  object-fit: contain;
+}
+@media (max-width: 520px) {
+  html body .page .construction .brand .brand__logo {
+    width: 142px;
+  }
+}
+html body .page .construction .brand .brand__fallback {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #D4A72C;
+}
+html body .page .construction .brand .brand__fallback :not([hidden]) {
+  display: inline-flex;
+}
+html body .page .construction .brand .brand__fallback .brand__mark {
+  font-size: 43px;
+  font-weight: 800;
+  line-height: 1;
+  text-shadow: 0 0 22px rgba(255, 201, 40, 0.25);
+}
+html body .page .construction .brand .brand__fallback .brand__name {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+html body .page .construction .brand .brand__fallback .brand__name small {
+  display: block;
+  color: #F5F7FA;
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 0.42em;
+  margin-top: 2px;
+}
+html body .page .construction .gear-tile {
+  width: 70px;
+  height: 70px;
+  display: grid;
+  place-items: center;
+  color: #FFC928;
+  background: rgba(212, 167, 44, 0.075);
+  border: 1px solid rgba(212, 167, 44, 0.38);
+  border-radius: 16px;
+  transform: rotate(-30deg);
+  margin-bottom: 27px;
+  box-shadow: 0 0 35px rgba(212, 167, 44, 0.045);
+}
+html body .page .construction .gear-tile .gear-icon {
+  width: 30px;
+  height: 30px;
+  transform: rotate(30deg);
+  animation: gear-turn 18s linear infinite;
+}
+html body .page .construction h1 .page-title {
+  color: #f5f7fa;
+  font-size: clamp(2rem, 4.5vw, 2.45rem);
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.045em;
+}
+@media (max-width: 520px) {
+  html body .page .construction h1 .page-title {
+    max-width: 360px;
+    font-size: clamp(1.8rem, 8vw, 2.2rem);
+  }
+}
+html body .page .construction .subtitle {
+  margin-top: 13px;
+  color: #00B7FF;
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+@media (max-width: 520px) {
+  html body .page .construction .subtitle {
+    max-width: 330px;
+    font-size: 13px;
+  }
+}
+html body .page .construction .contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+}
+@media (max-width: 520px) {
+  html body .page .construction .contact-links {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 280px;
+    margin-top: 24px;
+  }
+}
+html body .page .construction .contact-links .contact-link {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 16px;
+  border: 1px solid #17263e;
+  border-radius: 8px;
+  background: rgba(11, 20, 36, 0.86);
+  color: #00B7FF;
+  font-size: 11px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color 180ms ease, color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+@media (max-width: 520px) {
+  html body .page .construction .contact-links .contact-link {
+    min-height: 43px;
+    font-size: 12px;
+  }
+}
+html body .page .construction .contact-links .contact-link svg {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  color: #FFC928;
+}
+html body .page .construction .contact-links .contact-link :hover,
+html body .page .construction .contact-links .contact-link :focus-visible {
+  color: #F5F7FA;
+  border-color: rgba(255, 201, 40, 0.55);
+  background: rgba(212, 167, 44, 0.09);
+  transform: translateY(-2px);
+  outline: none;
+}
+html body .page .footer {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 70px;
+  color: #0A1B33;
+  font-size: 9px;
+  font-weight: 400;
+  text-align: center;
+  animation: fade-in 1.2s ease both;
+}
+@media (max-width: 520px) {
+  html body .page .footer {
+    padding-top: 56px;
+    font-size: 9px;
+  }
+}
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes gear-turn {
+  from {
+    transform: rotate(30deg);
+  }
+  to {
+    transform: rotate(390deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
