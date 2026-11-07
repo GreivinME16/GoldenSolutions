@@ -240,3 +240,82 @@ html body .page .footer {
     transition-duration: 0.01ms !important;
   }
 }
+/* =================================
+   RESPONSIVE - GOLDEN SOLUTIONS
+================================= */
+/* Tablets */
+@media screen and (max-width: 768px) {
+  .page {
+    padding: 40px 24px 24px;
+  }
+  .construction {
+    width: 100%;
+  }
+  h1 {
+    font-size: clamp(28px, 5vw, 36px);
+  }
+  .subtitle {
+    max-width: 90%;
+    font-size: 14px;
+  }
+}
+/* Celulares */
+@media screen and (max-width: 480px) {
+  .page {
+    padding: 30px 18px 20px;
+  }
+  .brand {
+    margin-bottom: 30px;
+  }
+  .brand__logo {
+    width: 135px;
+  }
+  .gear-tile {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 25px;
+  }
+  .gear-icon {
+    width: 32px;
+    height: 32px;
+  }
+  h1 {
+    font-size: 28px;
+    line-height: 1.25;
+    max-width: 100%;
+  }
+  .subtitle {
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 320px;
+  }
+  .contact-links {
+    width: 100%;
+    max-width: 290px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .contact-link {
+    width: 100%;
+    min-height: 44px;
+    font-size: 12px;
+    justify-content: center;
+  }
+  .footer {
+    font-size: 9px;
+    padding-top: 45px;
+  }
+}
+/* Celulares muy pequeños */
+@media screen and (max-width: 360px) {
+  h1 {
+    font-size: 25px;
+  }
+  .subtitle {
+    font-size: 12px;
+  }
+  .brand__logo {
+    width: 125px;
+  }
+}
