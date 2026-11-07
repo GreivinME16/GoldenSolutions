@@ -24,9 +24,19 @@ html body .page {
   position: relative;
   overflow: hidden;
 }
+@media screen and (max-width: 768px) {
+  html body .page {
+    padding: 40px 24px 24px;
+  }
+}
 @media (max-width: 520px) {
   html body .page {
     padding: 32px 24px 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html body .page {
+    padding: 16px 24px 24px;
   }
 }
 html body .page .construction {
@@ -36,6 +46,11 @@ html body .page .construction {
   align-items: center;
   text-align: center;
   animation: fade-up 900ms ease both;
+}
+@media screen and (max-width: 768px) {
+  html body .page .construction {
+    width: 100%;
+  }
 }
 html body .page .construction .brand {
   display: inline-flex;
@@ -50,6 +65,11 @@ html body .page .construction .brand {
     margin-bottom: 24px;
   }
 }
+@media screen and (max-width: 480px) {
+  html body .page .construction .brand {
+    margin-bottom: 32px;
+  }
+}
 html body .page .construction .brand .brand__logo {
   display: block;
   width: 154px;
@@ -59,6 +79,16 @@ html body .page .construction .brand .brand__logo {
 @media (max-width: 520px) {
   html body .page .construction .brand .brand__logo {
     width: 142px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html body .page .construction .brand .brand__logo {
+    width: 135px;
+  }
+}
+@media screen and (max-width: 360px) {
+  html body .page .construction .brand .brand__logo {
+    width: 125px;
   }
 }
 html body .page .construction .brand .brand__fallback {
@@ -104,11 +134,24 @@ html body .page .construction .gear-tile {
   margin-bottom: 27px;
   box-shadow: 0 0 35px rgba(212, 167, 44, 0.045);
 }
+@media screen and (max-width: 480px) {
+  html body .page .construction .gear-tile {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 24px;
+  }
+}
 html body .page .construction .gear-tile .gear-icon {
   width: 30px;
   height: 30px;
   transform: rotate(30deg);
   animation: gear-turn 18s linear infinite;
+}
+@media screen and (max-width: 480px) {
+  html body .page .construction .gear-tile .gear-icon {
+    width: 32px;
+    height: 32px;
+  }
 }
 html body .page .construction h1 .page-title {
   color: #f5f7fa;
@@ -117,10 +160,27 @@ html body .page .construction h1 .page-title {
   font-weight: 700;
   letter-spacing: -0.045em;
 }
+@media screen and (max-width: 768px) {
+  html body .page .construction h1 .page-title {
+    font-size: clamp(28px, 5vw, 36px);
+  }
+}
 @media (max-width: 520px) {
   html body .page .construction h1 .page-title {
     max-width: 360px;
     font-size: clamp(1.8rem, 8vw, 2.2rem);
+  }
+}
+@media screen and (max-width: 480px) {
+  html body .page .construction h1 .page-title {
+    font-size: 28px;
+    line-height: 1.25;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 360px) {
+  html body .page .construction h1 .page-title {
+    font-size: 25px;
   }
 }
 html body .page .construction .subtitle {
@@ -130,10 +190,28 @@ html body .page .construction .subtitle {
   line-height: 1.7;
   font-weight: 400;
 }
+@media screen and (max-width: 768px) {
+  html body .page .construction .subtitle {
+    max-width: 90%;
+    font-size: 14px;
+  }
+}
 @media (max-width: 520px) {
   html body .page .construction .subtitle {
     max-width: 330px;
     font-size: 13px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html body .page .construction .subtitle {
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 320px;
+  }
+}
+@media screen and (max-width: 360px) {
+  html body .page .construction .subtitle {
+    font-size: 12px;
   }
 }
 html body .page .construction .contact-links {
@@ -150,6 +228,15 @@ html body .page .construction .contact-links {
     align-items: stretch;
     max-width: 280px;
     margin-top: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html body .page .construction .contact-links {
+    width: 100%;
+    max-width: 290px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
   }
 }
 html body .page .construction .contact-links .contact-link {
@@ -172,6 +259,14 @@ html body .page .construction .contact-links .contact-link {
   html body .page .construction .contact-links .contact-link {
     min-height: 43px;
     font-size: 12px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html body .page .construction .contact-links .contact-link {
+    width: 100%;
+    min-height: 44px;
+    font-size: 12px;
+    justify-content: center;
   }
 }
 html body .page .construction .contact-links .contact-link svg {
@@ -202,6 +297,12 @@ html body .page .footer {
   html body .page .footer {
     padding-top: 56px;
     font-size: 9px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html body .page .footer {
+    font-size: 9px;
+    padding-top: 48px;
   }
 }
 @keyframes fade-up {
@@ -238,84 +339,5 @@ html body .page .footer {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
-  }
-}
-/* =================================
-   RESPONSIVE - GOLDEN SOLUTIONS
-================================= */
-/* Tablets */
-@media screen and (max-width: 768px) {
-  .page {
-    padding: 40px 24px 24px;
-  }
-  .construction {
-    width: 100%;
-  }
-  h1 {
-    font-size: clamp(28px, 5vw, 36px);
-  }
-  .subtitle {
-    max-width: 90%;
-    font-size: 14px;
-  }
-}
-/* Celulares */
-@media screen and (max-width: 480px) {
-  .page {
-    padding: 30px 18px 20px;
-  }
-  .brand {
-    margin-bottom: 30px;
-  }
-  .brand__logo {
-    width: 135px;
-  }
-  .gear-tile {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 25px;
-  }
-  .gear-icon {
-    width: 32px;
-    height: 32px;
-  }
-  h1 {
-    font-size: 28px;
-    line-height: 1.25;
-    max-width: 100%;
-  }
-  .subtitle {
-    font-size: 13px;
-    line-height: 1.6;
-    max-width: 320px;
-  }
-  .contact-links {
-    width: 100%;
-    max-width: 290px;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-  }
-  .contact-link {
-    width: 100%;
-    min-height: 44px;
-    font-size: 12px;
-    justify-content: center;
-  }
-  .footer {
-    font-size: 9px;
-    padding-top: 45px;
-  }
-}
-/* Celulares muy pequeños */
-@media screen and (max-width: 360px) {
-  h1 {
-    font-size: 25px;
-  }
-  .subtitle {
-    font-size: 12px;
-  }
-  .brand__logo {
-    width: 125px;
   }
 }
