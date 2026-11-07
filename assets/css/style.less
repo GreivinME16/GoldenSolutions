@@ -26,8 +26,16 @@
                 position: relative; 
                 overflow: hidden;
 
+                @media screen and (max-width: 768px) {
+                    padding: @spacing-40 @spacing-24 @spacing-24;
+                }
+
                 @media(max-width: 520px) {
                     padding: @spacing-32 @spacing-24 @spacing-24;
+                }
+
+                @media screen and (max-width: 480px) {
+                    padding: @spacing-16 @spacing-24 @spacing-24;
                 }
 
                 .construction {
@@ -37,6 +45,11 @@
                     align-items: center; 
                     text-align: center; 
                     animation: fade-up 900ms ease both;
+
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                    }
+
 
                     .brand { 
                         display: inline-flex; 
@@ -50,6 +63,10 @@
                             margin-bottom: @spacing-24; 
                         }
 
+                        @media screen and (max-width: 480px) {
+                            margin-bottom: @spacing-32;
+                        }
+
                         .brand__logo { 
                             display: block; 
                             width: 154px; 
@@ -58,6 +75,14 @@
 
                             @media(max-width: 520px) {
                                 width: 142px; 
+                            }
+
+                            @media screen and (max-width: 480px) {
+                                width: 135px;
+                            }
+                            
+                            @media screen and (max-width: 360px) {
+                                width: 125px;
                             }
                         }
                         .brand__fallback { 
@@ -105,15 +130,26 @@
                         background: rgba(212,167,44,.075); 
                         border: 1px solid rgba(212,167,44,.38);
                         border-radius: 16px; 
-                        transform: rotate(-30deg); 
+                        transform: rotate(-40deg); 
                         margin-bottom: 27px;
                         box-shadow: 0 0 35px rgba(212,167,44,.045);
+
+                        @media screen and (max-width: 480px) {
+                            width: 64px;
+                            height: 64px;
+                            margin-bottom: @spacing-24;
+                        }
 
                         .gear-icon { 
                             width: 30px; 
                             height: 30px; 
                             transform: rotate(30deg); 
-                            animation: gear-turn 18s linear infinite; 
+                            animation: gear-turn 18s linear infinite;
+                            
+                            @media screen and (max-width: 480px) {
+                                width: 32px;
+                                height: 32px;
+                            }
                         }
                     }
 
@@ -126,9 +162,23 @@
                             font-weight: 700; 
                             letter-spacing: -.045em; 
 
+                            @media screen and (max-width: 768px) {
+                                font-size: clamp(28px, 5vw, 36px);
+                            }
+
                             @media(max-width: 520px) {
                                 max-width: 360px; 
                                 font-size: clamp(1.8rem,8vw,2.2rem);
+                            }
+
+                            @media screen and (max-width: 480px) {
+                                font-size: 28px;
+                                line-height: 1.25;
+                                max-width: 100%;
+                            }
+
+                            @media screen and (max-width: 360px) {
+                                font-size: 25px;
                             }
                         }
                     }
@@ -140,9 +190,24 @@
                         line-height: 1.7; 
                         font-weight: 400; 
 
+                        @media screen and (max-width: 768px) {
+                            max-width: 90%;
+                            font-size: 14px;
+                        }
+
                         @media(max-width: 520px) {
                             max-width: 330px; 
                             font-size: 13px; 
+                        }
+
+                        @media screen and (max-width: 480px) {
+                            font-size: 13px;
+                            line-height: 1.6;
+                            max-width: 320px;
+                        }
+                        
+                        @media screen and (max-width: 360px) {
+                            font-size: 12px;
                         }
                     }
 
@@ -159,6 +224,14 @@
                             align-items: stretch; 
                             max-width: 280px; 
                             margin-top: @spacing-24; 
+                        }
+
+                        @media screen and (max-width: 480px) {
+                            width: 100%;
+                            max-width: 290px;
+                            flex-direction: column;
+                            align-items: stretch;
+                            gap: @spacing-16;
                         }
 
                         .contact-link {
@@ -180,6 +253,13 @@
                             @media(max-width: 520px) {
                                 min-height: 43px; 
                                 font-size: 12px;
+                            }
+
+                            @media screen and (max-width: 480px) {
+                                width: 100%;
+                                min-height: 44px;
+                                font-size: 12px;
+                                justify-content: center;
                             }
 
                             svg { 
@@ -213,6 +293,11 @@
                     @media(max-width: 520px) {
                         padding-top: @spacing-56; 
                         font-size: 9px;
+                    }
+
+                    @media screen and (max-width: 480px) {
+                        font-size: 9px;
+                        padding-top: @spacing-48;
                     }
                 }
             }
