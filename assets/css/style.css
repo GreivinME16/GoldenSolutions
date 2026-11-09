@@ -250,7 +250,7 @@ html body .page .construction .contact-links .contact-link {
   border-radius: 8px;
   background: rgba(11, 20, 36, 0.86);
   color: #00B7FF;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   text-decoration: none;
   transition: border-color 180ms ease, color 180ms ease, background 180ms ease, transform 180ms ease;
@@ -258,14 +258,14 @@ html body .page .construction .contact-links .contact-link {
 @media (max-width: 520px) {
   html body .page .construction .contact-links .contact-link {
     min-height: 43px;
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 480px) {
   html body .page .construction .contact-links .contact-link {
     width: 100%;
     min-height: 44px;
-    font-size: 14px;
+    font-size: 12px;
     justify-content: center;
   }
 }
