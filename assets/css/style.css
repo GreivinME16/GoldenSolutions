@@ -305,9 +305,6 @@ html body .page .footer {
     padding-top: 48px;
   }
 }
-html body .nl-wrap {
-  display: none !important;
-}
 @keyframes fade-up {
   from {
     opacity: 0;
